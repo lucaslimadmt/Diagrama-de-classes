@@ -1,0 +1,57 @@
+@startuml atividade
+
+class loja {
+    - id: int
+    - nome: string
+    - localizacao: string
+    - descricao: string
+    }
+class cliente {
+    - id: int
+    - nome: string
+    - email: string
+    - cpf: string
+    - rg: string
+    - Intergir: escolherFormadePagamento{}
+    - Intergir: colocarItemnoCarrinho{}
+    - Intergir: tirarItemdoCarrinho{}
+    - Intergir: observarPlateleiras{}
+}
+class atendente {
+    - id: int
+    - nome: string
+    - email: string
+    - cpf: string
+    - rg: string
+    - Intergir: tirarDuvida{}
+    - Intergir: atenderCliente{}
+    - Intergir: realizarVenda{}
+}
+class produtos_estoque{
+    - id: int
+    - nome: string
+    - descricao: string
+    - valor: double
+    - quantidade: int
+    }
+class pedido {
+    - id: int
+    - produto: string
+    - quantidade: int
+    - valor: double
+}
+class pagamento {
+    - id: int
+    - forma_de_pagamento: string
+    - valor: double
+    - cliente: string
+    - Intergir: validarCartao{}
+    - Intergir: comprovante{}
+    - Intergir: calcularTroco{}
+}
+@enduml
+
+
+
+
+
